@@ -9,7 +9,7 @@ $ pkg install py37-certbot
 ### Generate ECDSA certificat let's encrypt
 - ECDSA
     ```shell
-    $ certbot certonly --key-type ecdsa --cert-name zami3l.com -d zami3l.com --elliptic-curve secp256r1 --standalone
+    $ certbot certonly --key-type ecdsa --cert-name zami3l.com -d zami3l.com --elliptic-curve secp384r1 --standalone
     ```
 
 - RSA
