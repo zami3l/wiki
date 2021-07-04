@@ -57,3 +57,10 @@ $ pacman -S weechat
 # Use auto identify after connection
 /set irc.server.[nameServer].command "/msg nickserver identify ${sec.data.[nameServerPassword]}"
 ```
+
+### 6. SASL
+```shell
+# Set username and password
+/set irc.server.[nameServer].sasl_username "zami3l"
+/set irc.server.[nameServer].sasl_password "${sec.data.[nameServerPassword]}"
+```
