@@ -1,37 +1,52 @@
-# Summary
+#Summary
 
-- [Databases](databases/README.md)
+- [Databases]()
+    - [Install MariaDB on FreeBSD](databases/install-freebsd-mariadb.md)
 
-- [Jails](jails/README.md)
+- [Jails]()
 
-- [Misc](misc/README.md)
+- [Misc]()
+    - [IRC]()
+        - [Use Weechat](misc/irc/use-weechat.md)
+        - [Customization Weechat](misc/irc/custom-weechat.md)
 
-- [Networking](networking/README.md)
-    - [DNS](networking/dns/README.md)
+- [Networking]()
+    - [DNS]()
 
-- [Programming](programming/README.md)
-    - [Shell](programming/shell/README.md)
-    - [Python](programming/python/README.md)
-    - [Rust](programming/rust/README.md)
+- [Programming]()
+    - [Shell]()
+    - [Python]()
+    - [Rust]()
 
-- [Scripting](scripting/README.md)
+- [Scripting]()
 
-- [Security](security/README.md)
+- [Security]()
+    - [Encryption]()
+        - [Use cryptetup](security/encryption/cryptsetup.md)
+    - [SSL]()
+        - [Diffie Hellman.md](security/ssl/diffie-hellman.md)
+        - [Use CerBot](security/ssl/use-certbot.md)
+    - [Tools]()
+        - [Firefox privacy plugins](security/tools/firefox-privacy-plugins.md)
+    - [U2F]()
+        - [Solokeys](security/u2f/solokeys.md)
 
-- [Storage](storage/README.md)
+- [Storage]()
 
-- [System Management](system-management/README.md)
-    - [Install](system-management/install/README.md)
-    - [Setup](system-management/setup/README.md)
-    - [Upgrade](system-management/upgrade/README.md)
+- [System Management]()
+    - [FreeBSD]()
+        - [Use Port Collections](system-management/freebsd/ports-collection.md)
+    - [Install]()
+    - [Setup]()
+        - [Setup disk on FreeBSD](system-management/setup/setup-freebsd-disk.md)
+    - [Upgrade]()
 
-- [Tools](tools/README.md)
+- [Tools]()
 
-- [Troubleshooting](troubleshooting/README.md)
+- [Troubleshooting]()
 
-- [Virtualization](virtualization/README.md)
-    - [kvm](virtualization/kvm/README.md)
+- [Virtualization]()
+    - [kvm]()
 
-- [Web](web/README.md)
-    - [Proxy](web/proxy/README.md)
-    - [Reverse-Proxy](web/reverse-proxy/README.md)
+- [Web]()
+    - [Install Gitea on FreeBSD](web/install-freebsd-gitea.md)
