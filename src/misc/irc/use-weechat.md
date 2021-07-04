@@ -48,7 +48,7 @@ $ pacman -S weechat
 /msg nickserv identify [MyPassword]
 ```
 
-### 5. Create wallet password
+### 5. Create keystore
 ```shell
 # Create passphrase
 /secure passphrase [YourPassphrase]
