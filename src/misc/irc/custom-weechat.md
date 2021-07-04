@@ -8,35 +8,35 @@ Customization weechat
 
 ### Plugins
 - Allow download scripts
-```shell
-/set script.scripts.download_enabled on
-```
+    ```shell
+    /set script.scripts.download_enabled on
+    ```
 
 - Autosort alphabetical
-```shell
-# Install
-/script install autosort.py
-# If you want to manually run it
-/autosort
-```
+    ```shell
+    # Install
+    /script install autosort.py
+    # If you want to manually run it
+    /autosort
+    ```
 
 - Autojoin
-```shell
-# Install
-/script install autojoin.py
-# If you ever want to save your list of joined channels
-/autojoin --run
-/save
-```
+    ```shell
+    # Install
+    /script install autojoin.py
+    # If you ever want to save your list of joined channels
+    /autojoin --run
+    /save
+    ```
 
 - Emoji
-```shell
-# Install
-/script install emoji.lua
-```
+    ```shell
+    # Install
+    /script install emoji.lua
+    ```
 
 - List buffer optimized
-```shell
-# Install
-/script install listbuffer.py
-```
+    ```shell
+    # Install
+    /script install listbuffer.py
+    ```

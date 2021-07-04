@@ -6,9 +6,9 @@ How to use Weechat
 
 ### 1. Install
 - Archlinux
-```shell
-$ pacman -S weechat
-```
+    ```shell
+    $ pacman -S weechat
+    ```
 
 ### 2. Join a new server
 ```shell
@@ -66,38 +66,40 @@ $ pacman -S weechat
 ```
 
 ### 7. Others
-```shell
-# Protect nick
-/msg nickserver set secure on
-```
+- Protect nick
+    ```shell
+    /msg nickserver set secure on
+    ```
 
-```shell
-# Set new password
-/msg nickserver set password "MyNewPassword"
-```
-```shell
-# Delete ghost connection
-/msg nickserver ghost zami3l "MyPassword"
-```
+- Set new password
+    ```shell
+    /msg nickserver set password "MyNewPassword"
+    ```
 
-```shell
-# Info nick
-/msg nickserver info Pseudo
-```
+- Delete ghost connection
+    ```shell
+    /msg nickserver ghost zami3l "MyPassword"
+    ```
 
-```shell
-# Set url
-/msg nickserver set url MyWebsite
-# Set email
-/msg nickserver set email MyEmail
-```
+- Info nick
+    ```shell
+    /msg nickserver info Pseudo
+    ```
 
-```shell
-# Hide information
-/msg nickserver hide email
-```
+- Url and email information
+    ```shell
+    # Set url
+    /msg nickserver set url MyWebsite
+    # Set email
+    /msg nickserver set email MyEmail
+    ```
 
-```shell
-# Check all settings
-/set irc.server.[nameServer].*
-```
+- Hide information
+    ```shell
+    /msg nickserver hide email
+    ```
+
+- Check all settings
+    ```shell
+    /set irc.server.[nameServer].*
+    ```
