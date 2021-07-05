@@ -25,6 +25,7 @@
 - [Security]()
     - [Encryption]()
         - [Use cryptetup](security/encryption/cryptsetup.md)
+        - [Use veracrypt](security/encryption/veracrypt.md)
     - [SSL]()
         - [Diffie Hellman.md](security/ssl/diffie-hellman.md)
         - [Use CerBot](security/ssl/use-certbot.md)
