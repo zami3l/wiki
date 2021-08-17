@@ -68,7 +68,7 @@ root@archiso ~ # cgdisk /dev/sdb
 ##### 4.3. Create LVM
 
 | pv | vg | lv | size |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | /dev/sda2 | vg_sys | lv_swap | 4G |
 | /dev/sda2 | vg_sys | lv_root | 15,5G |
 | /dev/sdb1 | vg_data | lv_home | 20G |
