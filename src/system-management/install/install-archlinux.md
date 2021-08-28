@@ -7,20 +7,20 @@ Disks type : **GPT**
 Disk sda : **20G**  
 Disk sdb : **40G**  
 
-### 1. Download iso
-You will find the Archlinux iso here : [Arch Linux](https://www.archlinux.org/download/)
+### 1. Téléchargement
+Vous trouverez l'iso d'ArchLinux ici : [Arch Linux](https://www.archlinux.org/download/)
 
-### 2. Prepare an installation on usb
+### 2. Préparation de la clé USB bootable
 ```shell
 dd if=/path/archlinux.iso of=/dev/sdx bs=4M
 ```
 
-### 3. Set the keyboard layout
+### 3. Changement du clavier en fr
 ```shell
 root@archiso ~ # loadkeys fr
 ```
 
-### 4. Partition the disks
+### 4. Partionnement des disques
 
 ```shell
 root@archiso ~ # fdisk -l
@@ -45,13 +45,13 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 ```
 
-##### 4.1. Use GPT partition table
+##### 4.1. Définition de la table de partionnement en GPT
 ```shell
 root@archiso ~ # sgdisk -m /dev/sda
 root@archiso ~ # sgdisk -m /dev/sdb
 ```
 
-##### 4.2 Create partition sys and data
+##### 4.2 Création des partitions SYS et DATA
 
 | description| disk | partition | type | size |
 | --- | --- | --- | --- | --- |
@@ -65,7 +65,7 @@ root@archiso ~ # cgdisk /dev/sdb
 ```
 
 
-##### 4.3. Create LVM
+##### 4.3. Création du LVM
 
 | pv | vg | lv | size |
 | --- | --- | --- | --- |
@@ -73,7 +73,7 @@ root@archiso ~ # cgdisk /dev/sdb
 | /dev/sda2 | vg_sys | lv_root | 15,5G |
 | /dev/sdb1 | vg_data | lv_home | 20G |
 
-###### 4.3.1. Physical volume
+###### 4.3.1. Volume physique
 ```shell
 root@archiso ~ # pvcreate /dev/sda2
   Physical volume "/dev/sda2" successfully created.
@@ -81,7 +81,7 @@ root@archiso ~ # pvcreate /dev/sdb1
   Physical volume "/dev/sdb1" successfully created.
 ```
 
-###### 4.3.2. Volume group 
+###### 4.3.2. Groupe de volumes
 ```shell
 root@archiso ~ # vgcreate vg_sys /dev/sda2
   Volume group "vg_sys" successfully created
@@ -89,7 +89,7 @@ root@archiso ~ # vgcreate vg_data /dev/sdb1
   Volume group "vg_data" successfully created
 ```
 
-###### 4.3.2. Logical volume 
+###### 4.3.2. Volume logique
 ```shell
 root@archiso ~ # lvcreate -L 4G -n lv_swap vg_sys
   Logical volume "lv_swap" created.
@@ -100,7 +100,7 @@ root@archiso ~ # lvcreate -l 50%FREE -n lv_home vg_data
   Logical volume "lv_home" created.
 ```
 
-##### 4.4. Encrypt and Mount root partition
+##### 4.4. Chiffrement et montage de la partition root
 
 ```shell
 root@archiso ~ # cryptsetup luksFormat /dev/vg_sys/lv_root
@@ -118,7 +118,7 @@ root@archiso ~ # cryptsetup open /dev/vg_sys/lv_root luks_root
 Enter passphrase for /dev/vg_sys/lv_root:
 ```
 
-##### 4.5. Format the partitions
+##### 4.5. Formatage des partitions
 
 ```shell
 root@archiso ~ # mkfs.fat -F32 /dev/sda1
@@ -137,14 +137,14 @@ Creating journal (16384 blocks): done
 Writing superblocks and filesystem accounting information: done
 ```
 
-#### 5. Mount the file systems
+#### 5. Montage du file systems
 ```shell
 root@archiso ~ # mount /dev/mapper/luks_root /mnt
 root@archiso ~ # mkdir /mnt/{boot,home}
 root@archiso ~ # mount /dev/sda1 /mnt/boot
 ```
 
-#### 6. Select the mirrors
+#### 6. Sélection des mirroirs
 Select and Sort the 5 most recently synchronized https mirrors in France then sort them by speed and finally save the result in /etc/pacman.d/mirrorlist:
 ```shell
 root@archiso ~ # reflector --verbose --country 'France' -l 3 -p https --sort rate --save /etc/pacman.d/mirrorlist
@@ -155,29 +155,29 @@ root@archiso ~ # reflector --verbose --country 'France' -l 3 -p https --sort rat
 [2021-08-16 00:00:00] INFO: https://XXX/archlinux/  11249.43 KiB/s     0.51 s
 ```
 
-#### 7. Install essential packages
+#### 7. Installation des packages indispensables
 ```shell
 root@archiso ~ # pacstrap /mnt base base-devel lvm2 cryptsetup linux linux-headers linux-firmware dosfstools grub os-prober efibootmgr
 root@archiso ~ # pacstrap /mnt bash-completion vim dhcpcd git
 ```
 
-#### 8. Generate fstab
+#### 8. Génération du fstab
 ```shell
 # Generate fstab
 root@archiso ~ # genfstab -U -p /mnt >> /mnt/etc/fstab
 ```
 
-#### 9. Go to chroot to configure the system !!
+#### 9. Configuration du système via le chroot
 ```shell
 root@archiso ~ # arch-chroot /mnt
 ```
 
-##### 9.1. Time zone
+##### 9.1. Fuseau horaire
 ```shell
 [root@archiso /]# ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
 ```
 
-##### 9.2. Localization
+##### 9.2. Localisation
 
 ###### 9.2.1. Locales
 ```shell
@@ -195,12 +195,12 @@ Generation complete.
 [root@archiso /]# echo -e "LANG=fr_FR.UTF-8 \nLC_COLLATE=C" >> /etc/locale.conf
 ```
 
-###### 9.2.3. Keyboard layout
+###### 9.2.3. Disposition des touches clavier
 ```shell
 [root@archiso /]# echo "KEYMAP=fr-latin9" >> /etc/vconsole.conf
 ```
 
-#### 10. Network configuration
+#### 10. Configuration réseaux
 
 ##### 10.1. Hostname
 ```shell
@@ -217,13 +217,13 @@ Generation complete.
 
 #### 11. Initramfs
 
-##### 11.1. Activate lvm and luks for mkinitcpio
+##### 11.1. Chargement lvm et luks
 ```shell
 [root@archiso /]# vim /etc/mkinitcpio.conf
 HOOKS=(... lvm2 encrypt udev keyboard keymap)
 ```
 
-##### 11.2. Install kernel
+##### 11.2. Installation du kernel
 ```shell
 mkinitcpio -p linux
 ```
@@ -231,26 +231,26 @@ mkinitcpio -p linux
 #### 12. Boot loader
 
 ##### 12.1. Efivar
-- Check if efivar mounted
+- Vérifier si efivar est monté
 ```shell
 [root@archiso /]# mount | grep efivar
 efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
 ```
 
-- If not mount
+- Si ce n'est pas le cas :
 ```shell
 [root@archiso /]# mount -t efivarfs efivarfs /sys/firmware/efi/efivars
 ```
 
 ##### 12.2. Grub
 
-###### 12.2.1. Get UUID lv_root
+###### 12.2.1. Récupération UUID lv_root
 ```shell
 [root@archiso /]# blkid -s UUID -o value /dev/vg_sys/lv_root
 00000000-0000-0000-0000-000000000000
 ```
 
-###### 12.2.2. Configure
+###### 12.2.2. Configuration
 - Uncomment GRUB_ENABLE_CRYPTODISK
 - Change GRUB_CMDLINE_LINUX
 ```shell
@@ -259,14 +259,14 @@ GRUB_ENABLE_CRYPTODISK=y
 GRUB_CMDLINE_LINUX="cryptdevice=UUID=00000000-0000-0000-0000-000000000000:luks_root root=/dev/mapper/luks_root"
 ```
 
-###### 12.2.3. Install
+###### 12.2.3. Installation
 ```shell
 [root@archiso /]# grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck
 Installing for x86_64-efi platform.
 Installation finished. No error reported.
 ```
 
-###### 12.2.3. Generate
+###### 12.2.3. Génération
 ```shell
 [root@archiso /]# grub-mkconfig -o /boot/grub/grub.cfg
 Generating grub configuration file ...
@@ -280,9 +280,9 @@ Adding boot menu entry for UEFI Firmware Settings ...
 done
 ```
 
-#### 13. Configuration lv_home
+#### 13. Configuration de la partition lv_home
 
-##### 13.1. Generate key file luks for lv_home partition
+##### 13.1. Génération key file pour la partition lv_home
 ```shell
 [root@archiso /]# mkdir -m 700 /etc/luks-keys
 
@@ -292,9 +292,9 @@ done
 256 bytes copied, 0.000772168 s, 332 kB/s
 ```
 
-##### 13.2. Encrypt and Mount lv_home partition with key file
+##### 13.2. Chiffrement (avec key file) et montage de la partition lv_home
 
-###### 13.2.1. Encrypt
+###### 13.2.1. Chiffrement
 ```shell
 [root@archiso /]# cryptsetup luksFormat -v /dev/vg_data/lv_home /etc/luks-keys/home
 
@@ -307,12 +307,12 @@ Key slot 0 created.
 Command successful.
 ```
 
-###### 13.2.2. Mount
+###### 13.2.2. Montage
 ```shell
 [root@archiso /]# cryptsetup -d /etc/luks-keys/home open /dev/vg_data/lv_home luks_home
 ```
 
-##### 13.3. Format the partition
+##### 13.3. Formatage
 ```shell
 [root@archiso /]# mkfs.ext4 /dev/mapper/luks_home
 mke2fs 1.46.3 (27-Jul-2021)
@@ -328,7 +328,7 @@ Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done
 ```
 
-##### 13.4. Mount at boot time lv_home and lv_swap
+##### 13.4. Montage lv_home et lv_swap au boot
 ```shell
 [root@archiso /]# vim /etc/crypttab
 luks_home /dev/vg_data/lv_home  /etc/luks-keys/home
@@ -339,12 +339,12 @@ luks_swap /dev/vg_sys/lv_swap  /dev/urandom  swap,cipher=aes-xts-plain64,size=25
 /dev/mapper/luks_swap  none   swap   sw  0  0
 ```
 
-#### 14. Root password
+#### 14. Mot de passe root
 ```shell
 [root@archiso /]# passwd
 ```
 
-#### 15. Enjoy with Arch Linux 
+#### 15. Maintenant, vous pouvez vous amuser avec ArchLinux =)
 ```
 [root@archiso /]# exit
 root@archiso ~ # umount -R /mnt
