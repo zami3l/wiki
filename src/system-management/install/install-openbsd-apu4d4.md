@@ -1,21 +1,21 @@
-Install Openbsd on APU4D4
+Installation d'Openbsd sur un APU4D4
 ===
 
-### 0. Versions and Description
+### 0. Descriptions
 OpenBSD : **6.9**  
 Hardware : **APU4D4**  
 Bios : **4.14.0.2**  
 
-### 1. Copy openbsd in USB key
+### 1. Téléchargement et copie sur la clé USB
 ```shell
-# Download the last version
+# Téléchargement de la dernière version d'0penBSD
 wget https://cdn.openbsd.org/pub/OpenBSD/6.9/amd64/install69.img
 
-# Copy to usb
+# Copie de l'image sur la clé USB
 dd if=install69.img of=/dev/sdX bs=1M
 ```
 
-### 2. Start listen for serial communication
+### 2. Démarrage de l'écoute sur le port série
 ```shell
 $ picocom -b 115200 /dev/ttyUSB0
 
@@ -47,14 +47,14 @@ Type [C-a] [C-h] to see available commands
 Terminal ready
 ```
 
-### 3. Plug USB and start APU4D4
-It is important to enter this before starting boot :
+### 3. Insertion de la clé USB et Démarrage de l'APU4D4
+Il est important de saisir au moment du boot :
 ```shell
 stty com0 115200
 set tty com0
 boot /bsd.rd
 ```
-Otherwise openbsd will fail to start.
+Sinon, OpenBSD ne pourra pas démarrer.
 
 <pre>
 PC Engines apu4
@@ -102,8 +102,10 @@ Welcome to the OpenBSD/amd64 6.9 installation program.
 (I)nstall, (U)pgrade, (A)utoinstall or (S)hell?
 </pre>
 
-### 4. Install OpenBSD
-When choosing the fileset, I removed the fileset related to X server:
+### 4. Installation d'OpenBSD
+Lors de la sélection des paquets à inclure à l'installation, j'ai volontairement supprimé tous les paquets X server.
+En effet, l'APU4D4 sera utilisé comme firewall, il n'est donc pas nécessaire de garder ces paquets.
+
 ```shell
 Select sets by entering a set name, a file name pattern or 'all'. De-select
 sets by prepending a '-', e.g.: '-game*'. Selected sets are labelled '[X]'.
