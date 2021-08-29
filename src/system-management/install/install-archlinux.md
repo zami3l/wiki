@@ -1,4 +1,4 @@
-# How to install ArchLinux
+# Installation d'ArchLinux
 
 ### 0. Description
 Archlinux Current Release : **2021.08.01**  
