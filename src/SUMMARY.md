@@ -24,6 +24,7 @@
         - [Use Tcpdump](networking/packet-analyzer/use-tcpdump.md)
     - [Setup]()
         - [Setup interface on OpenBSD](networking/setup/setup-openbsd-interface.md)
+        - [Setup VPN Mullvad on OpenBSD](networking/setup/setup-openbsd-wireguard-mullvad.md)
 
 - [Security]()
     - [Encryption]()
@@ -68,3 +69,4 @@
 - [Web]()
     - [Install Apache on FreeBSD](web/install-freebsd-apache.md)
     - [Install Gitea on FreeBSD](web/install-freebsd-gitea.md)
+    - [Install rTorrent on OpenBSD](web/install-openbsd-rtorrent.md)
