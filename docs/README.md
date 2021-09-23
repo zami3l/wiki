@@ -1,2 +1,2 @@
 # cheatsheets
-The little cheatsheets for Sys/Net/Sec Admin
+The little wiki for Sys/Net/Sec Admin
