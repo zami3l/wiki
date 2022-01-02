@@ -1,4 +1,4 @@
-Installation de rTorrent sur OpenBSD
+Configuration de rTorrent
 ===
 
 ### 0. Versions

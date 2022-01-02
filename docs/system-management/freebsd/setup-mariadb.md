@@ -1,11 +1,11 @@
-Install MariaDB on FreeBSD
+Configuration d'un serveur MariaDB
 ===
 
 ### 0. Versions
 FreeBSD : **13.0**  
 MariaDB : **10.5.10**
 
-### 1. Search and install MariaDB server
+### 1. Installation
 ```shell
 $ pkg search mariadb
 mariadb105-client-10.5.10      Multithreaded SQL database (client)
@@ -39,7 +39,7 @@ Creating user 'mysql' with uid '88'.
 [2/2] Extracting mariadb105-client-10.5.10: 100%
 ```
 
-### 2. Start and Enable service
+### 2. Activation et démarrage du service
 ```shell
 # Enable
 $ sysrc mysql_enable="YES"
@@ -53,7 +53,7 @@ OK
 Starting mysql.
 ```
 
-### 3. Harden MariaDB
+### 3. Sécurisation
 ```shell
 $ mysql_secure_installation
 
@@ -123,7 +123,7 @@ installation should now be secure.
 Thanks for using MariaDB!
 ```
 
-### 4. Connection test
+### 4. Test de connexion
 ```shell
 $ mysql -u root -p
 Enter password:
@@ -136,19 +136,19 @@ Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 ```
 
-### 5. Checking service listen
+### 5. Vérification du service
 ```shell
 sockstat -4 | grep mysql
 mysql    mariadbd   1155  19 tcp4   127.0.0.1:3306        *:*
 ```
 
-### 6. Limit mysql service to connecting from localhost
+### 6. Limitation de connexion à mysql seulement depuis le localhost
 ```shell
 $ sysrc mysql_args="--bind-address=127.0.0.1"
 mysql_args: -> --bind-address=127.0.0.1
 ```
 
-### 7. Restart service for apply changes
+### 7. Redémarrage du service pour appliquer les modifications
 ```shell
 $ service mysql-server restart
 Stopping mysql.
