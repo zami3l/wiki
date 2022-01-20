@@ -38,6 +38,7 @@ nav:
       - SSL:
           - Diffie Hellman.md: security/ssl/diffie-hellman.md
           - Use CerBot: security/ssl/use-certbot.md
+          - Use OpenSSL: security/ssl/use-openssl.md
           - Create CA and CERT: security/ssl/create-ca-crt.md
       - Tools:
           - Firefox privacy plugins: security/tools/firefox-privacy-plugins.md
