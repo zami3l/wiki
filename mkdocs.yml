@@ -14,51 +14,50 @@ nav:
       - In construction: jails/README.md
   - Misc:
       - IRC:
-          - Use Weechat: misc/irc/use-weechat.md
-          - Customization Weechat: misc/irc/custom-weechat.md
+          - HowTo weechat: misc/irc/howto-weechat.md
+          - Customization weechat: misc/irc/custom-weechat.md
   - Pentest:
       - Crack:
-          - Use John for brute force shadow: pentest/crack/use-john-bruteforce-shadow.md
+          - HowTo john for brute force shadow: pentest/crack/howto-john-bruteforce-shadow.md
   - Networking:
+      - Netmask table: networking/netmask-table.md
+      - HowTo tcpdump: networking/howto-tcpdump.md
+      - HowTo netcat: networking/howto-netcat.md
+      - HowTo serial console: networking/howto-serial-console.md
       - DNS:
           - Setup unbound on OpenBSD: networking/dns/setup-openbsd-unbound.md
-      - Netmask Table: networking/netmask-table.md
-      - Packet Analyzer:
-          - Use Tcpdump: networking/packet-analyzer/use-tcpdump.md
       - Setup:
           - Setup interface on OpenBSD: networking/setup/setup-openbsd-interface.md
-          - Setup VPN Mullvad on OpenBSD: networking/setup/setup-openbsd-wireguard-mullvad.md
-      - Tools:
-          - Use Netcat-OpenBSD: networking/tools/use-netcat-openbsd.md
+          - Setup VPN mullvad on OpenBSD: networking/setup/setup-openbsd-wireguard-mullvad.md
   - Security:
       - Encryption:
-          - Create GPG keys: security/encryption/create-gpg-keys.md
-          - Use cryptetup: security/encryption/cryptsetup.md
-          - Use veracrypt: security/encryption/veracrypt.md
+          - HowTo create GPG keys: security/encryption/howto-create-gpg-keys.md
+          - HowTo cryptetup: security/encryption/howto-cryptsetup.md
+          - HowTo veracrypt: security/encryption/howto-veracrypt.md
       - SSL:
           - Diffie Hellman.md: security/ssl/diffie-hellman.md
-          - Use CerBot: security/ssl/use-certbot.md
-          - Use OpenSSL: security/ssl/use-openssl.md
-          - Create CA and CERT: security/ssl/create-ca-crt.md
+          - HowTo cerbot: security/ssl/howto-certbot.md
+          - HowTo openSSL: security/ssl/howto-openssl.md
+          - HowTo create CA and CERT: security/ssl/howto-create-ca-crt.md
       - Tools:
           - Firefox privacy plugins: security/tools/firefox-privacy-plugins.md
       - U2F:
-          - Solokeys: security/u2f/solokeys.md
+          - HowTo Solokeys: security/u2f/howto-solokeys.md
   - Storage:
       - In construction: storage/README.md
   - System Management:
       - Backup:
-          - Extract and mount clonezilla backup: system-management/backup/extract-clonezilla-backup.md
+          - HowTo clonezilla backup: system-management/backup/howto-clonezilla-backup.md
       - FreeBSD:
-          - Upgrade System & Packages: system-management/freebsd/update-upgrade-system-packages.md
+          - HowTo upgrade: system-management/freebsd/howto-upgrade.md
           - Setup disk: system-management/freebsd/setup-freebsd-disk.md
-          - Setup Apache: system-management/freebsd/setup-apache.md
-          - Setup MariaDB: system-management/freebsd/setup-mariadb.md
-          - Setup Gitea: system-management/freebsd/setup-gitea.md
-          - Use Port Collections: system-management/freebsd/ports-collection.md
+          - Setup apache: system-management/freebsd/setup-apache.md
+          - Setup mariaDB: system-management/freebsd/setup-mariadb.md
+          - Setup gitea: system-management/freebsd/setup-gitea.md
+          - HowTo port collections: system-management/freebsd/howto-ports-collection.md
       - OpenBSD:
           - Install file sets: system-management/openbsd/install-sets.md
-          - Setup Nginx: system-management/openbsd/setup-nginx.md
+          - Setup nginx: system-management/openbsd/setup-nginx.md
           - Setup rTorrent: system-management/openbsd/setup-rtorrent.md
       - Install:
           - Install OpenBSD on APU4D4: system-management/install/install-openbsd-apu4d4.md
@@ -73,8 +72,7 @@ nav:
   - Troubleshooting:
       - Redis failed opening dump.rdb: troubleshooting/redis-failed-opening-dump.md
   - Virtualization:
-      - kvm:
-          - Install KVM on ArchLinux: virtualization/kvm/install-archlinux-kvm.md
+      - Install KVM on ArchLinux: virtualization/kvm/install-archlinux-kvm.md
   - Web:
       - In construction: web/README.md
 
