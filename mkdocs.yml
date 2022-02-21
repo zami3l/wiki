@@ -23,6 +23,7 @@ nav:
       - Netmask table: networking/netmask-table.md
       - HowTo tcpdump: networking/howto-tcpdump.md
       - HowTo netcat: networking/howto-netcat.md
+      - HowTo VRF: networking/howto-vrf.md
       - HowTo serial console: networking/howto-serial-console.md
       - DNS:
           - Setup unbound on OpenBSD: networking/dns/setup-openbsd-unbound.md
