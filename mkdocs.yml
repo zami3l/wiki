@@ -8,75 +8,65 @@ site_url: https://wiki.zami3l.com
 # NAVIGATION
 # ----------------------------------------------
 nav:
-  - Databases:
-      - In construction: databases/README.md
-  - Jails:
-      - In construction: jails/README.md
-  - Misc:
-      - IRC:
-          - HowTo weechat: misc/irc/howto-weechat.md
-          - Customization weechat: misc/irc/custom-weechat.md
-  - Pentest:
-      - Crack:
-          - HowTo john for brute force shadow: pentest/crack/howto-john-bruteforce-shadow.md
-  - Networking:
-      - Netmask table: networking/netmask-table.md
-      - HowTo tcpdump: networking/howto-tcpdump.md
-      - HowTo netcat: networking/howto-netcat.md
-      - HowTo VRF: networking/howto-vrf.md
-      - HowTo serial console: networking/howto-serial-console.md
-      - DNS:
-          - Setup unbound on OpenBSD: networking/dns/setup-openbsd-unbound.md
-      - Setup:
-          - Setup interface on OpenBSD: networking/setup/setup-openbsd-interface.md
-          - Setup VPN mullvad on OpenBSD: networking/setup/setup-openbsd-wireguard-mullvad.md
-  - Security:
-      - Encryption:
-          - HowTo create GPG keys: security/encryption/howto-create-gpg-keys.md
-          - HowTo cryptetup: security/encryption/howto-cryptsetup.md
-          - HowTo veracrypt: security/encryption/howto-veracrypt.md
-      - SSL:
-          - Diffie Hellman.md: security/ssl/diffie-hellman.md
-          - HowTo cerbot: security/ssl/howto-certbot.md
-          - HowTo openSSL: security/ssl/howto-openssl.md
-          - HowTo create CA and CERT: security/ssl/howto-create-ca-crt.md
-      - Tools:
-          - Firefox privacy plugins: security/tools/firefox-privacy-plugins.md
-      - U2F:
-          - HowTo Solokeys: security/u2f/howto-solokeys.md
-  - Storage:
-      - In construction: storage/README.md
-  - System Management:
-      - Backup:
-          - HowTo clonezilla backup: system-management/backup/howto-clonezilla-backup.md
-      - FreeBSD:
-          - HowTo pkg: system-management/freebsd/howto-pkg.md
-          - HowTo upgrade: system-management/freebsd/howto-upgrade.md
-          - Setup disk: system-management/freebsd/setup-freebsd-disk.md
-          - Setup apache: system-management/freebsd/setup-apache.md
-          - Setup mariaDB: system-management/freebsd/setup-mariadb.md
-          - Setup gitea: system-management/freebsd/setup-gitea.md
-          - HowTo port collections: system-management/freebsd/howto-ports-collection.md
-      - OpenBSD:
-          - Install file sets: system-management/openbsd/install-sets.md
-          - Setup nginx: system-management/openbsd/setup-nginx.md
-          - Setup rTorrent: system-management/openbsd/setup-rtorrent.md
-      - Install:
-          - Install OpenBSD on APU4D4: system-management/install/install-openbsd-apu4d4.md
-          - Install ArchLinux: system-management/install/install-archlinux.md
-  - Tools:
-      - git:
-          - Conventional commits: tools/git/conventional-commits.md
-          - Pushing multiple: tools/git/pushing-multiple.md
-          - Setup git: tools/git/setup-git.md
-      - metasploit:
-          - Install metasploit on ArchLinux: tools/metasploit/install-archlinux-metasploit.md
+  - ArchLinux:
+    - System Management:
+      - Install OS: archlinux/system-management/install.md
+    - Install:
+      - Docker: archlinux/install/docker.md
+      - KVM: archlinux/install/kvm.md
+      - Metasploit: archlinux/install/metasploit.md
+  - OpenBSD:
+    - System Management:
+      - Install on APU4D4: openbsd/system-management/apu4d4.md
+      - Install file sets: openbsd/system-management/file-sets.md
+    - Install:
+      - Nginx: openbsd/install/nginx.md
+      - rTorrent: openbsd/install/rtorrent.md
+      - Unbound: openbsd/install/unbound.md
+    - Setup:
+      - Network interface: openbsd/setup/network-interface.md
+      - Wireguard with Mullvad: openbsd/setup/wireguard-mullvad.md
+  - FreeBSD:
+    - System Management:
+      - Add partition: freebsd/system-management/apu4d4.md
+      - PKG: freebsd/system-management/pkg.md
+      - Ports collection: freebsd/system-management/ports-collection.md
+      - Upgrade: freebsd/system-management/upgrade.md
+    - Install:
+      - Apache: freebsd/install/apache.md
+      - Gitea: freebsd/install/gitea.md
+      - MariaDB: freebsd/install/mariadb.md
+  - HowTo:
+    - Backup:
+      - CloneZilla: howto/backup/clonezilla.md
+    - Encryption:
+      - Create GPG keys: howto/encryption/create-gpg-keys.md
+      - Cryptsetup: howto/encryption/cryptsetup.md
+      - Veracrypt: howto/encryption/veracrypt.md
+      - Solokey: howto/encryption/solokey.md
+    - Git:
+      - Conventional Commits: howto/git/conventional-commits.md
+      - Pushing Multiple: howto/git/pushing-multiple.md
+      - Setup Git: howto/git/setup-git.md
+    - Misc:
+      - WeeChat: howto/misc/weechat.md
+      - Custom WeeChat: howto/misc/custom-weechat.md
+      - Firefox plugins: howto/misc/firefox-privacy-plugins.md
+    - Networking:
+      - Netmask Table: howto/networking/netmask-table.md
+      - Serial console: howto/networking/serial-console.md
+      - NetCat: howto/networking/netcat.md
+      - Tcpdump: howto/networking/tcpdump.md
+      - VRF: howto/networking/vrf.md
+    - SSL:
+      - Certbot: howto/ssl/certbot.md
+      - Create CA / Cert: howto/ssl/create-ca-crt.md
+      - OpenSSL: howto/ssl/openssl.md
+      - Diffie Hellman: howto/ssl/diffie-helman.md
+    - Pentest:
+      - John bruteforce shadow: howto/pentest/john-bruteforce-shadow.md
   - Troubleshooting:
-      - Redis failed opening dump.rdb: troubleshooting/redis-failed-opening-dump.md
-  - Virtualization:
-      - Install KVM on ArchLinux: virtualization/kvm/install-archlinux-kvm.md
-  - Web:
-      - In construction: web/README.md
+    - Redis failed opening dump.rdb: troubleshooting/redis-failed-opening-dump.md
 
 # ----------------------------------------------
 # THEME
@@ -104,9 +94,11 @@ theme:
     # Suivi des ancres actives
     - navigation.tracking
     # Pré-Chargement
-    - navigation.instant
+    #    - navigation.instant
     # Navigation par section
     - navigation.sections
+    # Navigation déployée
+    - navigation.expand
     # Bouton de retour en haut
     - navigation.top
     # Cacher l'en-tête
