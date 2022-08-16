@@ -19,6 +19,7 @@ nav:
     - System Management:
       - Install on APU4D4: openbsd/system-management/apu4d4.md
       - Install file sets: openbsd/system-management/file-sets.md
+      - PKG: openbsd/system-management/pkg.md
     - Install:
       - Nginx: openbsd/install/nginx.md
       - rTorrent: openbsd/install/rtorrent.md
@@ -28,7 +29,7 @@ nav:
       - Wireguard with Mullvad: openbsd/setup/wireguard-mullvad.md
   - FreeBSD:
     - System Management:
-      - Add partition: freebsd/system-management/apu4d4.md
+      - Add partition: freebsd/system-management/add-partition.md
       - PKG: freebsd/system-management/pkg.md
       - Ports collection: freebsd/system-management/ports-collection.md
       - Upgrade: freebsd/system-management/upgrade.md
@@ -39,6 +40,7 @@ nav:
   - HowTo:
     - Backup:
       - CloneZilla: howto/backup/clonezilla.md
+      - Rsync: howto/backup/rsync.md
     - Encryption:
       - Create GPG keys: howto/encryption/create-gpg-keys.md
       - Cryptsetup: howto/encryption/cryptsetup.md
@@ -62,7 +64,7 @@ nav:
       - Certbot: howto/ssl/certbot.md
       - Create CA / Cert: howto/ssl/create-ca-crt.md
       - OpenSSL: howto/ssl/openssl.md
-      - Diffie Hellman: howto/ssl/diffie-helman.md
+      - Diffie Hellman: howto/ssl/diffie-hellman.md
     - Pentest:
       - John bruteforce shadow: howto/pentest/john-bruteforce-shadow.md
   - Troubleshooting:
@@ -96,7 +98,9 @@ theme:
     # Pré-Chargement
     #    - navigation.instant
     # Navigation par section
-    - navigation.sections
+    #- navigation.sections
+    # Navigation via tabs
+    - navigation.tabs
     # Navigation déployée
     - navigation.expand
     # Bouton de retour en haut
