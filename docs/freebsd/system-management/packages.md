@@ -1,4 +1,4 @@
-PKG
+Gestion des packages
 ===
 
 - Rechercher packages
@@ -34,4 +34,10 @@ freebsd:~ # pkg delete package_name
 - Suppression des dépendances inutilisées
 ```shell
 freebsd:~ # pkg autoremove
+```
+
+- Mise à jour des packages
+```shell
+freebsd:~ # pkg update
+freebsd:~ # pkg upgrade
 ```
