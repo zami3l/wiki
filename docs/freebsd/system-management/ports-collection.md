@@ -1,7 +1,7 @@
 Ports Collection
 ===
 
-### 1. Install Ports Collection
+### 1. Mettre à jour la collection de ports
 ```shell
 # Fetch
 $ portsnap fetch
@@ -26,10 +26,13 @@ Applying patches...
 done.
 Fetching 2 new ports or files... done.
 
-# Extract
+# Extract (Seulement si c'est la première fois)
 $ portsnap extract
 [...]
 Building new INDEX files... done.
+
+# Update
+$ portsnap update
 ```
 
 ### 2. Search and install ports
@@ -38,33 +41,30 @@ $ cd /usr/ports
 
 # Search
 $ make search name=crowdsec
-Port:   crowdsec-1.0.13
-Path:   /usr/ports/security/crowdsec
-Info:   Crowdsec lightweight and collaborative security engine
-Maint:  sbz@FreeBSD.org
-B-deps: go-1.16.5,1
-R-deps:
-WWW:    https://github.com/crowdsecurity/crowdsec
-
-Port:   crowdsec-firewall-bouncer-0.0.12
-Path:   /usr/ports/security/crowdsec-firewall-bouncer
-Info:   Crowdsec bouncer written in golang for firewalls
-Maint:  sbz@FreeBSD.org
-B-deps: go-1.16.5,1
-R-deps: crowdsec-1.0.13
-WWW:    https://github.com/crowdsecurity/cs-firewall-bouncer
 ```
 
 ```shell
 # Install and clean
 $ cd /usr/ports/security/crowdsec
 $ make install clean
-===>  License MIT accepted by the user
-===>   crowdsec-1.0.13 depends on file: /usr/local/sbin/pkg - found
-===>   crowdsec-1.0.13 depends on file: /usr/local/bin/go - not found
-[..]
-===>  Staging for crowdsec-1.0.13
-Installing crowdsec-1.0.13...
-===>  Cleaning for go-1.16.5,1
-===>  Cleaning for crowdsec-1.0.13
+```
+
+3. Mise à jour des ports
+
+```shell
+# Vérifier les packages à mettre à jour
+$ pkg version -l "<"
+
+# Ou via portmaster
+$ portmaster -L
+```
+
+```shell
+# Lire le fichier /usr/ports/UPDATING
+$ less /usr/ports/UPDATING
+```
+
+```shell
+# Procéder à la mise à jour
+$ portmaster -a
 ```
