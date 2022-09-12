@@ -53,7 +53,6 @@ nav:
     - Misc:
       - WeeChat: howto/misc/weechat.md
       - Custom WeeChat: howto/misc/custom-weechat.md
-      - Firefox plugins: howto/misc/firefox-privacy-plugins.md
     - Networking:
       - Netmask Table: howto/networking/netmask-table.md
       - Serial console: howto/networking/serial-console.md
