@@ -41,3 +41,8 @@ $ certbot revoke --cert-name crt-zami3l
 # Via le chemin du certificat
 $ certbot revoke --cert-path /usr/local/etc/letsencrypt/live/zami3l.com/cert.pem
 ```
+
+### Supprimer un certificat
+```shell
+$ certbot delete --cert-name crt-zami3l
+```
