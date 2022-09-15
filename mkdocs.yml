@@ -29,10 +29,12 @@ nav:
       - Wireguard with Mullvad: openbsd/setup/wireguard-mullvad.md
   - FreeBSD:
     - System Management:
+      - Install ZFS root partition: freebsd/system-management/install-zfs-root-part.md
       - Add partition: freebsd/system-management/add-partition.md
       - Packages: freebsd/system-management/packages.md
       - Ports collection: freebsd/system-management/ports-collection.md
       - Upgrade: freebsd/system-management/upgrade.md
+      - ZFS Raid-1: freebsd/system-management/zfs-raid-1.md
     - Install:
       - Apache: freebsd/install/apache.md
       - Gitea: freebsd/install/gitea.md
