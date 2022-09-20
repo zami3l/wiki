@@ -34,6 +34,7 @@ nav:
       - Packages: freebsd/system-management/packages.md
       - Ports collection: freebsd/system-management/ports-collection.md
       - Upgrade: freebsd/system-management/upgrade.md
+      - ZFS Encryption: freebsd/system-management/zfs-encryption.md
       - ZFS Raid-1: freebsd/system-management/zfs-raid-1.md
     - Install:
       - Apache: freebsd/install/apache.md
