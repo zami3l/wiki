@@ -30,6 +30,7 @@ nav:
   - FreeBSD:
     - System Management:
       - Install ZFS root partition: freebsd/system-management/install-zfs-root-part.md
+      - Install UFS root encrypted: freebsd/system-management/install-ufs-root-encryption.md
       - Add partition: freebsd/system-management/add-partition.md
       - Packages: freebsd/system-management/packages.md
       - Ports collection: freebsd/system-management/ports-collection.md
