@@ -54,7 +54,7 @@ newfs -U /dev/ada0p4.eli
 ### 3. Montage des partitions pour l'installation
 - Partition système
 ```shell
-mount /dev/da0p4.eli /mnt
+mount /dev/ada0p4.eli /mnt
 ```
 - Partition boot
 ```shell
@@ -71,14 +71,14 @@ Déclarer les partitions à monter au démarrage via le fstab `/tmp/bsdinstall_e
 # Device			Mountpoint	FStype	Options			Dump	Pass
 /dev/gpt/bootfs		/bootfs		ufs		rw,noatime		1		1
 /dev/gpt/swap.eli	none		swap	sw				0		0
-/dev/da0p4.eli		/			ufs		rw,noatime		2		2
+/dev/ada0p4.eli		/			ufs		rw,noatime		2		2
 ```
 
 ### 5. Loader
 Indiquer au système qu'il doit charger geli et le chemin de la partition système dans le fichier `/tmp/bsdinstall_boot/loader.conf`.
 ```shell
 geom_eli_load="YES"
-vfs.root.mountfrom="ufs:da0p4.eli"
+vfs.root.mountfrom="ufs:ada0p4.eli"
 ```
 
 ### 6. Installation
