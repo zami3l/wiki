@@ -19,6 +19,7 @@ nav:
     - System Management:
       - Install on APU4D4: openbsd/system-management/apu4d4.md
       - Install file sets: openbsd/system-management/file-sets.md
+      - Install from debian: openbsd/system-management/ramdisk-from-debian.md
       - PKG: openbsd/system-management/pkg.md
     - Install:
       - Nginx: openbsd/install/nginx.md
@@ -26,6 +27,7 @@ nav:
       - Unbound: openbsd/install/unbound.md
     - Setup:
       - Network interface: openbsd/setup/network-interface.md
+      - Unbound with rdomain: openbsd/setup/unbound-rdomain.md
       - Wireguard with Mullvad: openbsd/setup/wireguard-mullvad.md
   - FreeBSD:
     - System Management:
@@ -58,6 +60,7 @@ nav:
       - Conventional Commits: howto/git/conventional-commits.md
       - Pushing Multiple: howto/git/pushing-multiple.md
       - Setup Git: howto/git/setup-git.md
+      - Branch: howto/git/branch.md
     - Misc:
       - WeeChat: howto/misc/weechat.md
       - Custom WeeChat: howto/misc/custom-weechat.md
