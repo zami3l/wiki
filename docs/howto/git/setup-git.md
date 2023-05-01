@@ -25,7 +25,7 @@ git config --global tag.gpgSign true
 ```shell
 # Alias for commits with sign
 # Use : git cs "My commit"
-git config --global alias.cs 'commit -a -m'
+git config --global alias.cs 'commit -m'
 
 # View logs with sign
 # Use : git logs
