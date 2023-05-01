@@ -1,9 +1,9 @@
 # Installation d'OpenBSD ramdisk depuis debian
 
 ### 0. Descriptions
-Bootloader : **GRUB**
-Debian : **Bulleyes**
-OpenBSD : **7.3**
+Bootloader : **GRUB**  
+Debian : **Bulleyes**  
+OpenBSD : **7.3**  
 
 L'un de mes hébergeurs VPS ne propose pas la possiblité d'installer un OS autre que ceux fournit par défaut.  
 Pour palier ce problème, nous allons ajouter une entrée à GRUB pour qu'il puisse démarrer sur le noyau ramdisk d'OpenBSD.
