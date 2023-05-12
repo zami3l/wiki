@@ -7,7 +7,7 @@ C'est une alternative aux protocoles VRRP de CISCO et CARP d'OpenBSD.
 ### 1.  Architecture
 Les routeurs **R1** et **R2** sont sous FreeBSD (Plus précisément **BSD Router Project**).
 
-![](./img/network_ucarp.png)
+![](network_ucarp.png)
 
 ### 2. Configuration routeurs
 
