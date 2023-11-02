@@ -34,15 +34,17 @@ nav:
   - FreeBSD:
     - System Management:
       - Boot serial console: freebsd/system-management/boot-serial-console.md
+      - Boot mfsBSD: freebsd/system-management/boot-ramdisk.md
       - Install ZFS root partition: freebsd/system-management/install-zfs-root-part.md
       - Install UFS root encrypted: freebsd/system-management/install-ufs-root-encryption.md
       - Add partition: freebsd/system-management/add-partition.md
       - Packages: freebsd/system-management/packages.md
       - Ports collection: freebsd/system-management/ports-collection.md
       - Upgrade: freebsd/system-management/upgrade.md
-      - ZFS Encryption: freebsd/system-management/zfs-encryption.md
-      - ZFS Raid-1: freebsd/system-management/zfs-raid-1.md
       - Get src from git: freebsd/system-management/get-src.md
+    - ZFS:
+      - ZFS Encryption: freebsd/zfs/zfs-encryption.md
+      - ZFS Raid-1: freebsd/zfs/zfs-raid-1.md
     - Network:
       - VRF: freebsd/network/vrf.md
       - Setup UCARP: freebsd/network/setup-ucarp.md
