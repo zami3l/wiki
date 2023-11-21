@@ -26,7 +26,7 @@ jail -R test_vnet
 - Suppression interface epair
 ```shell
 ifconfig bridge99 deletem epair99a
-ifconfig epair99 destroy
+ifconfig epair99a destroy
 ```
 
 ### 2. VNET jail avec fichier de configuration
