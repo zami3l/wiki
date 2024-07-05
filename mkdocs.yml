@@ -52,6 +52,7 @@ nav:
       - Initialisation: freebsd/jails/init-env.md
       - Create thick jail: freebsd/jails/create-thick-jail.md
       - Create vnet jail: freebsd/jails/create-vnet-jail.md
+      - Upgrade jail: freebsd/jails/upgrade-jail.md
     - Bastille:
       - Install: freebsd/bastille/install.md
       - Basic commands: freebsd/bastille/howto.md
