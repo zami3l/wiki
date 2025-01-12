@@ -44,6 +44,7 @@ nav:
       - ZFS Raid-1: freebsd/system-management/zfs-raid-1.md
       - Get src from git: freebsd/system-management/get-src.md
     - Network:
+      - VRF: freebsd/network/vrf.md
       - Setup UCARP: freebsd/network/setup-ucarp.md
     - Install:
       - Apache: freebsd/install/apache.md
