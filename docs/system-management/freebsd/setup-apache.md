@@ -1,11 +1,11 @@
-Install Apache on FreeBSD
+Configuration d'Apache
 ===
 
 ### 0. Versions
 FreeBSD : **13.0**  
 Apache : **2.4.48**
 
-### 1. Install Apache
+### 1. Installation
 ```shell
 $ pkg install apache24
 Updating FreeBSD repository catalogue...
@@ -31,7 +31,7 @@ Using existing user 'www'.
 [1/1] Extracting apache24-2.4.48: 100%
 ```
 
-### 2. Start and Enable Apache service
+### 2. Activation et démarrage du service
 ```shell
 # Enable
 $ sysrc apache24_enable="YES"
@@ -40,16 +40,16 @@ $ sysrc apache24_enable="YES"
 service apache24 start
 ```
 
-### 3. Setup Apache
+### 3. Configuration
 
-- Remove server informations
+- Suppression des informations du service
     ```shell
     $ vim /usr/local/etc/apache24/httpd.conf
     ServerTokens Prod
     ServerSignature Off
     ```
 
-- Remove indexes options
+- Suppression des indexes
     ```shell
     # Remove Options Indexes
     $ vim /usr/local/etc/apache24/httpd.conf
@@ -60,19 +60,19 @@ service apache24 start
     </Directory>
     ```
 
-- Diable Etag
+- Désactivation du Etag
     ```shell
     $ vim /usr/local/etc/apache24/httpd.conf
     FileEtag None
     ```
 
-- Disable trace HTTP
+- Désactivation des traces HTTP
     ```shell
     $ vim /usr/local/etc/apache24/httpd.conf
     TraceEnable off
     ```
 
-- Add timeout
+- Ajout d'un timeout
     ```shell
     $ vim /usr/local/etc/apache24/httpd.conf
     Timeout 60

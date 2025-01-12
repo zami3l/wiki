@@ -2,9 +2,9 @@ Configuration du VPN Mullvad sur OpenBSD
 ===
 
 ### 0. Description
-Dans cet exemple, nous allons configurer un serveur VPS pour :
-- Obtenir une interface wireguard avec la configuration générée par Mullvad
-- Faire transiter tout le flux du serveur par ce vpn
+Dans cet exemple, nous allons configurer un serveur VPS pour :  
+- Obtenir une interface wireguard avec la configuration générée par Mullvad  
+- Faire transiter tout le flux du serveur par ce vpn  
 - Garder un accès SSH sur le serveur sans passer par le VPN
 
 ### 1. Installation

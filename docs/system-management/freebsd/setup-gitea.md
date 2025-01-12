@@ -1,4 +1,4 @@
-Install Gitea on FreeBSD
+Configuration de Gitea
 ===
 
 ### 0. Versions
@@ -7,42 +7,42 @@ FreeBSD : **13.0**
 MariaDB : **10.5.10**  
 Gitea : **1.14.3**
 
-### 1. Database Preparation
+### 1. Préparation
 
-- Connect to database
+- Connexion à la base de données
 ```shell
 $ mysql -u root -p
 ```
-- Create user with password authentication
+- Création de l'utlisateur gitea
 ```sql
 > SET old_passwords=0;
 > CREATE USER 'gitea'@'localhost' IDENTIFIED BY 'MY_PASSWORD';
 ```
 
-- Set charset and collation
+- Paramétrage de l'encodage
 ```sql
 > CREATE DATABASE giteadb CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci';
 ```
 
-- Grant all privileges on the database to database user created above
+- Ajout des privilèges
 ```sql
 > GRANT ALL PRIVILEGES ON giteadb.* TO 'gitea'@'localhost';
 > FLUSH PRIVILEGES;
 ```
 
-- Test connection to the database with gitea user
+- Test de connexion
 ```shell
 $ mysql -u gitea -h localhost -p giteadb
 ```
 
-### 2. Install and Configure gitea
+### 2. Installation et Configuration
 
-- Install pkg packages
+- Installation des packages
 ```shell
 $ pkg install gitea
 ```
 
-- Configure gitea
+- Configuration
 ```shell
 $ vim /usr/local/etc/gitea/conf/app.ini
 
@@ -72,15 +72,15 @@ ROOT_URL     = http://localhost:3000/
 DISABLE_SSH  = false
 ```
 
-### 3. Start and Enable service
+### 3. Activation et démarrage du service
 
-- Enable
+- Activation
 ```shell
 $ sysrc gitea_enable="YES"
 gitea_enable:  -> YES
 ```
 
-- Start
+- Démarrage
 ```shell
 $ service gitea start
 ```

@@ -1,4 +1,4 @@
-Installation de Nginx sur OpenBSD
+Configuration de Nginx
 ===
 
 ### 0. Versions
