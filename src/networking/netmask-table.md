@@ -1,9 +1,9 @@
-Netmask Table
+Table des masques réseaux
 ===
 
 ```
-Bits    Dotted Decimal      Hexadecimal     Binary
-        Netmask             Netmask         Netmask
+Bits    Masque			    Masque			Masque
+        Décimal             Hexadécimal		Binaire
 -------------------------------------------------------------------------------
 /0      0.0.0.0             0x00000000      00000000 00000000 00000000 00000000  
 /1      128.0.0.0           0x80000000      10000000 00000000 00000000 00000000  
