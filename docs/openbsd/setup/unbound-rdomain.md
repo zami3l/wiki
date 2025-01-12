@@ -2,8 +2,8 @@
 
 ### 0. Descriptions
 
-OpenBSD : **7.3**
-Rdomain : **99**
+OpenBSD : **7.3**  
+Rdomain : **99**  
 
 Nous allons exécuter un serveur DNS Unbound dans un [rdomain](https://man.openbsd.org/rdomain.4) spécifique.
 Cela pemet d'avoir une séparation des serveurs DNS en fonction des rdomaines configurés.
