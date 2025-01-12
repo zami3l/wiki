@@ -33,10 +33,10 @@ $ gpg --homedir .gnupg --expert --full-gen-key
 ```
 
 Notre clé sera de type **(8) RSA (indiquez vous-même les capacités)**
-Pour que la première clé ne soit que pour la certification, il faut ensuite enchainer la combinaison suivante :
-1. (S) Inverser la capacité de signature
-2. (C) Inverser la capacité de chiffrement
-3. (Q) Terminé
+Pour que la première clé ne soit que pour la certification, il faut ensuite enchainer la combinaison suivante :  
+1. (S) Inverser la capacité de signature  
+2. (C) Inverser la capacité de chiffrement  
+3. (Q) Terminé  
 
 Par mesure de précaution, on choisira une clé de type **4096** bits.
 
@@ -77,9 +77,9 @@ On réitère les mêmes commandes que pour la sous-clé de signature à la diff�
 
 On réitère les mêmes commandes que pour la sous-clé de signature/chiffrement cependant on choisira une clé de type **(8) RSA (indiquez vous-même les capacités)**.
 
-Pour obtenir une sous-clé que pour l'authentification il faut exécuter les commandes suivantes :
-1. (S) Inverser la capacité de signature
-2. (C) Inverser la capacité de chiffrement
-3. (A) Inverser la capacité d'authentification
-4. (Q) Terminé
+Pour obtenir une sous-clé que pour l'authentification il faut exécuter les commandes suivantes :  
+1. (S) Inverser la capacité de signature  
+2. (C) Inverser la capacité de chiffrement  
+3. (A) Inverser la capacité d'authentification  
+4. (Q) Terminé  
 
