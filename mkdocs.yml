@@ -34,6 +34,7 @@ nav:
       - Wireguard with Mullvad: openbsd/setup/wireguard-mullvad.md
   - FreeBSD:
     - System Management:
+      - Boot serial console: freebsd/system-management/boot-serial-console.md
       - Install ZFS root partition: freebsd/system-management/install-zfs-root-part.md
       - Install UFS root encrypted: freebsd/system-management/install-ufs-root-encryption.md
       - Add partition: freebsd/system-management/add-partition.md
