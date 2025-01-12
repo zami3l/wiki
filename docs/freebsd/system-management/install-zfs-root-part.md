@@ -1,4 +1,4 @@
-Installation avec partition root ZFS
+Installation avec partition système ZFS
 ===
 
 ### 1. Partionnement
