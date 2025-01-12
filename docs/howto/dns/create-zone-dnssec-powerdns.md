@@ -125,4 +125,11 @@ domain.org. IN DS 12410 13 2 1234567890azertyuiopqsdfghjklmwxcvbn1234567890azert
 domain.org. IN DS 12410 13 4 azertyuiopqsdfghjklmwxcvbn1234567890azertyuiopqsdfghjklmwxcvbn1234567890azertyuiopqsdfghjklmwxcv ; ( SHA-384 digest )
 ```
 
+- Déclaration des enregistrements DS
 Ces enregistrements sont à déclarer sur le site de gestion du domaine. (Par exemple OVH)
+**Key Tag**: 12410  
+**Flag** : 257 - Key Signing Key (KSK)  
+**Algorithme** : 13 - ECDSAP256SHA256
+**Clé publique (encodée base64)** : azertyuiopqsdfghjklmwxcvbnazerty/1234567890AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghj==
+
+
