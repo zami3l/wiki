@@ -145,8 +145,8 @@ root@archiso ~ # mount /dev/sda1 /mnt/boot
 ```
 
 #### 6. Select the mirrors
+Select and Sort the 5 most recently synchronized https mirrors in France then sort them by speed and finally save the result in /etc/pacman.d/mirrorlist:
 ```shell
-# Select and Sort the 5 most recently synchronized https mirrors in France then sort them by speed and finally save the result in /etc/pacman.d/mirrorlist:
 root@archiso ~ # reflector --verbose --country 'France' -l 3 -p https --sort rate --save /etc/pacman.d/mirrorlist
 [2021-08-16 00:00:00] INFO: rating 3 mirror(s) by download speed
 [2021-08-16 00:00:00] INFO: Server                                             Rate       Time
