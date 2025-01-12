@@ -67,39 +67,39 @@ How to use Weechat
 
 ### 7. Others
 - Protect nick
-    ```shell
-    /msg NickServ set secure on
-    ```
+```shell
+/msg NickServ set secure on
+```
 
 - Set new password
-    ```shell
-    /msg NickServ set password "MyNewPassword"
-    ```
+```shell
+/msg NickServ set password "MyNewPassword"
+```
 
 - Delete ghost connection
-    ```shell
-    /msg NickServ ghost zami3l "MyPassword"
-    ```
+```shell
+/msg NickServ ghost zami3l "MyPassword"
+```
 
 - Info nick
-    ```shell
-    /msg NickServ info Pseudo
-    ```
+```shell
+/msg NickServ info Pseudo
+```
 
 - Url and email information
-    ```shell
-    # Set url
-    /msg NickServ set url MyWebsite
-    # Set email
-    /msg NickServ set email MyEmail
-    ```
+```shell
+# Set url
+/msg NickServ set url MyWebsite
+# Set email
+/msg NickServ set email MyEmail
+```
 
 - Hide information
-    ```shell
-    /msg NickServ hide email
-    ```
+```shell
+/msg NickServ hide email
+```
 
 - Check all settings
-    ```shell
-    /set irc.server.[nameServer].*
-    ```
+```shell
+/set irc.server.[nameServer].*
+```
