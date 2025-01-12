@@ -4,31 +4,32 @@ How to use Weechat
 ### 0. Description
 [WeeChat](https://github.com/weechat/weechat) (Wee Enhanced Environment for Chat) is a free chat client, fast and light, designed for many operating systems. It is highly customizable and extensible with scripts.
 
-### 1. Install
+### 1. Installation
 - Archlinux
     ```shell
     $ pacman -S weechat
     ```
 
-### 2. Join a new server
+### 2. Joindre un nouveau serveur
 ```shell
-# Add nameserver
+# Ajouter un serveur
 /server add [nameServer] [addressServer]/[portServer]
 /save
-# Set address
+# Ajouter une addresse serveur
 /set irc.server.[nameServer].addresses [addressServer]/[portServer]
-# Set ssl
+# Activer ssl
 /set irc.server.[nameServer].ssl on
-# If you want disable check ssl
+# Désactiver la vérification SSL (Seulement si nécessaire)
 /set irc.server.[nameServer].ssl_verify off
-# Auto connect
+# Reconnexion auto au serveur
 /set irc.server.[nameServer].autoconnect on
-# Auto join channel
+# Connexion auto à X salons
 /set irc.server.[nameServer].autojoin "#XXXXX,#XXXXX"
+# Sauvegarder
 /save
 ```
 
-### 3. Configure your identity
+### 3. Configurer son identité
 ```shell
 # Set nickname
 /set irc.server.[nameServer].nicks "zami3l"
@@ -40,53 +41,53 @@ How to use Weechat
 
 ### 4. NickServer
 ```shell
-# Register
+# S'enregistrer
 /msg NickServ register [MyPassword] [MyEmail]
-# Verify email
+# Vérifier son email
 /msg NickServ verify register zami3l [MyPassCode]
-# Identity
+# S'authentifier
 /msg NickServ identify [MyPassword]
 ```
 
-### 5. Create keystore
+### 5. Créer son coffre-fort
 ```shell
-# Create passphrase
+# Créer sa passphrase
 /secure passphrase [YourPassphrase]
-# Set password for server irc
+# Set password
 /secure set [nameServerPassword] [YourPassword]
-# Use auto identify after connection
+# S'authentifier automatiquement après la connexion
 /set irc.server.[nameServer].command "/msg NickServ identify ${sec.data.[nameServerPassword]}"
 ```
 
 ### 6. SASL
 ```shell
-# Set username and password
+# Set username et password
 /set irc.server.[nameServer].sasl_username "zami3l"
 /set irc.server.[nameServer].sasl_password "${sec.data.[nameServerPassword]}"
 ```
 
-### 7. Others
-- Protect nick
+### 7. Autres
+- Protéger son username
 ```shell
 /msg NickServ set secure on
 ```
 
-- Set new password
+- Configurer son password
 ```shell
 /msg NickServ set password "MyNewPassword"
 ```
 
-- Delete ghost connection
+- Supprimer le ghost connexion
 ```shell
 /msg NickServ ghost zami3l "MyPassword"
 ```
 
-- Info nick
+- Voir les informations username
 ```shell
 /msg NickServ info Pseudo
 ```
 
-- Url and email information
+- Ajouter URL et email
 ```shell
 # Set url
 /msg NickServ set url MyWebsite
@@ -94,12 +95,20 @@ How to use Weechat
 /msg NickServ set email MyEmail
 ```
 
-- Hide information
+- Cacher son email
 ```shell
 /msg NickServ hide email
 ```
 
-- Check all settings
+- Afficher la configuration du serveur
 ```shell
 /set irc.server.[nameServer].*
+```
+
+- Encodage
+```shell
+# Voir la configuration
+/charset
+# Set encodage
+/set charset.default.decode "ISO-8859-15"
 ```
