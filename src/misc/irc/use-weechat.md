@@ -64,3 +64,35 @@ $ pacman -S weechat
 /set irc.server.[nameServer].sasl_username "zami3l"
 /set irc.server.[nameServer].sasl_password "${sec.data.[nameServerPassword]}"
 ```
+
+### 7. Others
+```shell
+# Protect nick
+/msg nickserver set secure on
+```
+
+```shell
+# Set new password
+/msg nickserver set password "MyNewPassword"
+```
+```shell
+# Delete ghost connection
+/msg nickserver ghost zami3l "MyPassword"
+```
+
+```shell
+# Info nick
+/msg nickserver info Pseudo
+```
+
+```shell
+# Set url
+/msg nickserver set url MyWebsite
+# Set email
+/msg nickserver set email MyEmail
+```
+
+```shell
+# Hide information
+/msg nickserver hide email
+```
