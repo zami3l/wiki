@@ -48,15 +48,19 @@ nav:
     - Network:
       - VRF: freebsd/network/vrf.md
       - Setup UCARP: freebsd/network/setup-ucarp.md
-    - Install:
-      - Apache: freebsd/install/apache.md
-      - Gitea: freebsd/install/gitea.md
-      - MariaDB: freebsd/install/mariadb.md
+    - Jails:
+      - Initialisation: freebsd/jails/init-env.md
+      - Create thick jail: freebsd/jails/create-thick-jail.md
+      - Create vnet jail: freebsd/jails/create-vnet-jail.md
     - Bastille:
       - Install: freebsd/bastille/install.md
       - Basic commands: freebsd/bastille/howto.md
     - Setup:
       - Wireguard with Mullvad: freebsd/setup/wireguard-mullvad.md
+    - Install:
+      - Apache: freebsd/install/apache.md
+      - Gitea: freebsd/install/gitea.md
+      - MariaDB: freebsd/install/mariadb.md
   - HowTo:
     - Backup:
       - CloneZilla: howto/backup/clonezilla.md
