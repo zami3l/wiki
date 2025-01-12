@@ -37,6 +37,8 @@ nav:
       - Apache: freebsd/install/apache.md
       - Gitea: freebsd/install/gitea.md
       - MariaDB: freebsd/install/mariadb.md
+    - Bastille:
+      - Install: freebsd/bastille/install.md
   - HowTo:
     - Backup:
       - CloneZilla: howto/backup/clonezilla.md
