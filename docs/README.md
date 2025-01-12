@@ -1,2 +1,3 @@
-# cheatsheets
-The little wiki for Sys/Net/Sec Admin
+# Wiki
+
+Ce wiki est destiné à fournir des notes / exemples / tutoriels pour les admins (Sys, Net, Sys).
