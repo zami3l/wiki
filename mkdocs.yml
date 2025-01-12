@@ -49,6 +49,7 @@ nav:
       - Backup:
           - HowTo clonezilla backup: system-management/backup/howto-clonezilla-backup.md
       - FreeBSD:
+          - HowTo pkg: system-management/freebsd/howto-pkg.md
           - HowTo upgrade: system-management/freebsd/howto-upgrade.md
           - Setup disk: system-management/freebsd/setup-freebsd-disk.md
           - Setup apache: system-management/freebsd/setup-apache.md
