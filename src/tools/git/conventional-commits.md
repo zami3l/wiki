@@ -1,6 +1,6 @@
 # Conventional commits
 
-Below, my conventional commits that I use.
+Vous trouverez ci-dessous la convention de nommage de mes commits.
 
 ```
 <type>(<portée>): <sujet>
@@ -30,8 +30,8 @@ Par exemple, pour des fichiers de configurations Linux, je préciserai si c'est 
 #### **Le sujet**
 
 Description très succinte des changements.
-Le style descriptif est utilisé avec des noms, sans majuscule et sans point.  
-Par exemple : **supression**, **ajout**, **modification**, **renommage**, **changement**, ...
+Le style descriptif est utilisé avec des noms, sans majuscule, sans point et en anglais.
+Par exemple : **delete**, **add**, **change**, **rename**, **modif**, ...
 
 #### **La description**
 
