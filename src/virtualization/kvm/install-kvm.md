@@ -1,27 +1,22 @@
-Install KVM
+Installation de KVM
 ===
 
 ### 0. Description
-- **QEMU** is a generic and open source machine emulator and virtualizer.  
-- **Libvirt** is collection of software that provides a convenient way to manage virtual machines and other virtualization functionality, such as storage and network interface management.  
-- **Virt-Manager** is a desktop user interface for managing virtual machines through libvirt.  
+- **QEMU** est un logiciel libre de machine virtuelle, pouvant émuler un processeur et, plus généralement, une architecture différente si besoin.
+- **Libvirt** est une bibliothèque, une API, un daemon et des outils en logiciel libre de gestion de la virtualisation.
+- **Virt-Manager** est une interface graphique de gestion de machines virtuelles.
 
-### 1. Install kvm and management tools
+### 1. Installation de kvm et des outils de managements et de connectivités réseaux
 ```shell
-pacman -S qemu libvirt virt-manager dmidecode
+pacman -S qemu libvirt virt-manager dmidecode iptables-nft dnsmasq bridge-utils
 ```
 
-### 2. Install network connectivity
+### 2. Démarrage du service libvirtd
 ```shell
-pacman -S iptables-nft dnsmasq bridge-utils
+archlinux# systemctl start libvirtd
 ```
 
-### 3. Start libvirtd service
+### 3. Test de connexion avec virsh
 ```shell
-systemctl start libvirtd
-```
-
-### 4. Test connection with virsh
-```shell
-virsh -c qemu:///system
+archlinux# virsh -c qemu:///system
 ```
