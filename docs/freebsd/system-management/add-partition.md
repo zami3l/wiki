@@ -1,4 +1,4 @@
-Install MariaDB on FreeBSD
+Add partition
 ===
 
 ### 0. Versions
