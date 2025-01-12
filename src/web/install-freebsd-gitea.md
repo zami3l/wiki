@@ -3,8 +3,8 @@ Install Gitea on FreeBSD
 
 ### 0. Versions
 
-FreeBSD : **13.0**
-MariaDB : **10.5.10**
+FreeBSD : **13.0**  
+MariaDB : **10.5.10**  
 Gitea : **1.14.3**
 
 ### 1. Database Preparation
