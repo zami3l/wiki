@@ -17,6 +17,8 @@
         - [Use John for brute force shadow](pentest/crack/use-john-bruteforce-shadow.md)
 
 - [Networking]()
+    - [DNS]()
+        - [Setup unbound on OpenBSD](networking/dns/setup-openbsd-unbound.md)
     - [Netmask Table](networking/netmask-table.md)
     - [Packet Analyzer]()
         - [Use Tcpdump](networking/packet-analyzer/use-tcpdump.md)
