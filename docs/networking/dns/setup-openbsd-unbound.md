@@ -229,4 +229,10 @@ remote-control:
         control-enable: yes
         control-interface: /var/run/unbound.sock
 
+# Forward DNS
+forward-zone:
+        name: "."                               # use for ALL queries
+        forward-tls-upstream: yes
+        forward-first: no
+        forward-addr: 9.9.9.9@853               # Quad9
 ```
