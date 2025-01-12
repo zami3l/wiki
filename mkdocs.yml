@@ -37,6 +37,8 @@ nav:
       - Upgrade: freebsd/system-management/upgrade.md
       - ZFS Encryption: freebsd/system-management/zfs-encryption.md
       - ZFS Raid-1: freebsd/system-management/zfs-raid-1.md
+    - Networking:
+      - Setup UCARP: freebsd/networking/setup-ucarp.md
     - Install:
       - Apache: freebsd/install/apache.md
       - Gitea: freebsd/install/gitea.md
