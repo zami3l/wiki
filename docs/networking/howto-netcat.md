@@ -1,4 +1,4 @@
-# Netcat-OpenBSD
+# Netcat - Version OpenBSD
 
 ### 1. Installation
 

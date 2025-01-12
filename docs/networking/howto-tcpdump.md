@@ -1,7 +1,7 @@
-How to use tcpdump
+Tcpdump
 ===
 
-### Examples :
+### Exemples :
 
 ```shell
 # tcpdump -i em1 -n -ttt -c 5 icmp
