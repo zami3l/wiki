@@ -55,6 +55,10 @@ nav:
     - Backup:
       - CloneZilla: howto/backup/clonezilla.md
       - Rsync: howto/backup/rsync.md
+    - Database:
+      - PostgreSQL Replication: howto/database/replication-postgresql.md
+    - DNS:
+      - Create zone DNSSEC PowerDNS: howto/dns/create-zone-dnssec-powerdns.md
     - Encryption:
       - Create GPG keys: howto/encryption/create-gpg-keys.md
       - Cryptsetup: howto/encryption/cryptsetup.md
@@ -78,8 +82,6 @@ nav:
       - Create CA / Cert: howto/ssl/create-ca-crt.md
       - OpenSSL: howto/ssl/openssl.md
       - Diffie Hellman: howto/ssl/diffie-hellman.md
-    - Database:
-      - PostgreSQL Replication: howto/database/replication-postgresql.md
     - Pentest:
       - John bruteforce shadow: howto/pentest/john-bruteforce-shadow.md
   - Troubleshooting:
