@@ -2,7 +2,7 @@ Configuration VPN Mullvad
 ===
 
 ### 0. Description
-Dans cet exemple, nous allons configurer :
+Dans cet exemple, nous allons configurer :  
 - Un VPN Mullvad avec wireguard  
 - Le tunnel WG sera accessible seulement sur le rdomain/fib 1
 
@@ -83,7 +83,7 @@ service netif restart ; service routing restart
 wg0: flags=80c1<UP,RUNNING,NOARP,MULTICAST> metric 0 mtu 1420
         description: WireGuard VPN Mullvad
         options=80000<LINKSTATE>
-        inet 10.10.10.2 netmask 0xffffffff
+        inet 10.65.227.18 netmask 0xffffffff
         groups: wg
         fib: 1
         nd6 options=109<PERFORMNUD,IFDISABLED,NO_DAD>
