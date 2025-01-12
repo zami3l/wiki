@@ -19,6 +19,11 @@ bastille_zfs_enable="YES"
 bastille_zfs_zpool="zroot/bastille"
 ```
 
+Initialisation du bootstrap
+```shell
+bastille bootstrap 14.0-RELEASE
+```
+
 ### 3. Réseau
 Création de l'interface dédiée dans `/etc/rc.conf`
 ```shell
