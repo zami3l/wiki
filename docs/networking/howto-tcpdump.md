@@ -43,3 +43,11 @@ tcpdump: listening on em1, link-type EN10MB
 23:49:09.851277 00:0d:b9:5b:69:75 b8:27:eb:5a:6a:9c 8100 102: 802.1Q vid 2 pri 3 192.168.12.254 > 192.168.12.244: icmp: echo request
 23:49:09.851513 b8:27:eb:5a:6a:9c 00:0d:b9:5b:69:75 8100 102: 802.1Q vid 2 pri 1 192.168.12.244 > 192.168.12.254: icmp: echo reply
 ```
+
+```shell
+# tcpdump -nni em1 -w packet.pcap
+tcpdump: listening on em1, link-type EN10MB
+^C
+10 packets received by filter
+0 packets dropped by kernel
+```
