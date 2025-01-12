@@ -41,11 +41,11 @@ How to use Weechat
 ### 4. NickServer
 ```shell
 # Register
-/msg nickserv register [MyPassword] [MyEmail]
+/msg NickServ register [MyPassword] [MyEmail]
 # Verify email
-/msg nickserver verify register zami3l [MyPassCode]
+/msg NickServ verify register zami3l [MyPassCode]
 # Identity
-/msg nickserv identify [MyPassword]
+/msg NickServ identify [MyPassword]
 ```
 
 ### 5. Create keystore
@@ -55,7 +55,7 @@ How to use Weechat
 # Set password for server irc
 /secure set [nameServerPassword] [YourPassword]
 # Use auto identify after connection
-/set irc.server.[nameServer].command "/msg nickserver identify ${sec.data.[nameServerPassword]}"
+/set irc.server.[nameServer].command "/msg NickServ identify ${sec.data.[nameServerPassword]}"
 ```
 
 ### 6. SASL
@@ -68,35 +68,35 @@ How to use Weechat
 ### 7. Others
 - Protect nick
     ```shell
-    /msg nickserver set secure on
+    /msg NickServ set secure on
     ```
 
 - Set new password
     ```shell
-    /msg nickserver set password "MyNewPassword"
+    /msg NickServ set password "MyNewPassword"
     ```
 
 - Delete ghost connection
     ```shell
-    /msg nickserver ghost zami3l "MyPassword"
+    /msg NickServ ghost zami3l "MyPassword"
     ```
 
 - Info nick
     ```shell
-    /msg nickserver info Pseudo
+    /msg NickServ info Pseudo
     ```
 
 - Url and email information
     ```shell
     # Set url
-    /msg nickserver set url MyWebsite
+    /msg NickServ set url MyWebsite
     # Set email
-    /msg nickserver set email MyEmail
+    /msg NickServ set email MyEmail
     ```
 
 - Hide information
     ```shell
-    /msg nickserver hide email
+    /msg NickServ hide email
     ```
 
 - Check all settings
