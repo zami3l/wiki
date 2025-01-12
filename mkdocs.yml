@@ -82,7 +82,7 @@ theme:
 
   palette:
     # Default : Clair / Slate :  Sombre
-    scheme: default
+    scheme: slate
     # Couleur barre
     primary: red
     # Couleur lien
