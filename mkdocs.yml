@@ -81,6 +81,7 @@ nav:
       - Pushing Multiple: howto/git/pushing-multiple.md
       - Setup Git: howto/git/setup-git.md
       - Branch: howto/git/branch.md
+      - Rebase commits: howto/git/rebase-commits.md
     - Mail:
       - Sieve: howto/mail/sieve.md
     - Misc:
