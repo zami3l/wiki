@@ -1,37 +1,37 @@
 Cryptsetup
 ===
 
-## Create LUKS partition
+### 1. Create LUKS partition
 ```bash
 $ cryptsetup --verbose luksFormat --verify-passphrase /dev/sdX1
 ```
 
-## Initialize and unlock LUKS partition
+### 2. Initialize and unlock LUKS partition
 ```bash
 $ cryptsetup -v luksOpen /dev/sdX1 volumeEncrypted 
 ```
 
-## Create a filesystem on device mapper
+### 3. Create a filesystem on device mapper
 ```bash
 $ mkfs.ext4 /dev/mapper/volumeEncrypted
 ```
 
-## Mount the device mapper on the directory
+### 4. Mount the device mapper on the directory
 ```bash
 $ mkdir /mnt/volumeEncrypted && mount /dev/mapper/volumeEncrypted /mnt/volumeEncrypted
 ```
 
-## Umount the device mapper
+### 5. Umount the device mapper
 ```bash
 $ umount /mnt/volumeEncrypted
 ```
 
-## Lock LUKS partition
+### 6. Lock LUKS partition
 ```bash
 $ cryptsetup -v luksClose volumeEncrypted 
 ```
 
-## Bonus :
+### Bonus :
 
 ### Retrieve UUID of partitions
 ```bash
