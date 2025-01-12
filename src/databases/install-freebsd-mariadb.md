@@ -1,6 +1,10 @@
 Install MariaDB on FreeBSD
 ===
 
+### 0. Versions
+FreeBSD : **13.0**  
+MariaDB : **10.5.10**
+
 ### 1. Search and install MariaDB server
 ```shell
 $ pkg search mariadb
