@@ -126,7 +126,7 @@ domain.org. IN DS 12410 13 4 azertyuiopqsdfghjklmwxcvbn1234567890azertyuiopqsdfg
 ```
 
 - Déclaration des enregistrements DS
-Ces enregistrements sont à déclarer sur le site de gestion du domaine. (Par exemple OVH)
+Ces enregistrements sont à déclarer sur le site de gestion du domaine. (Par exemple OVH)  
 **Key Tag**: 12410  
 **Flag** : 257 - Key Signing Key (KSK)  
 **Algorithme** : 13 - ECDSAP256SHA256  
