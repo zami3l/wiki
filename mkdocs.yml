@@ -63,7 +63,7 @@ nav:
       - metasploit:
           - Install metasploit on ArchLinux: tools/metasploit/install-archlinux-metasploit.md
   - Troubleshooting:
-      - In construction: troubleshooting/README.md
+      - Redis failed opening dump.rdb: troubleshooting/redis-failed-opening-dump.md
   - Virtualization:
       - kvm:
           - Install KVM on ArchLinux: virtualization/kvm/install-archlinux-kvm.md
