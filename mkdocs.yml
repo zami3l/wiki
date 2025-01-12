@@ -30,7 +30,7 @@ nav:
   - FreeBSD:
     - System Management:
       - Add partition: freebsd/system-management/add-partition.md
-      - PKG: freebsd/system-management/pkg.md
+      - Packages: freebsd/system-management/packages.md
       - Ports collection: freebsd/system-management/ports-collection.md
       - Upgrade: freebsd/system-management/upgrade.md
     - Install:
