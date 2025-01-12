@@ -7,7 +7,7 @@
 root@arch# picocom -b 115200 /dev/ttyUSB0
 ```
 
-### 2. OpenBSD
+### 2. OpenBSD/FreeBSD
 
 - cu avec adaptateur USB <-> RS232
 
