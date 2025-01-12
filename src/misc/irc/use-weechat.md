@@ -96,3 +96,8 @@ $ pacman -S weechat
 # Hide information
 /msg nickserver hide email
 ```
+
+```shell
+# Check all settings
+/set irc.server.[nameServer].*
+```
