@@ -52,6 +52,8 @@ nav:
       - MariaDB: freebsd/install/mariadb.md
     - Bastille:
       - Install: freebsd/bastille/install.md
+    - Setup:
+      - Wireguard with Mullvad: freebsd/setup/wireguard-mullvad.md
   - HowTo:
     - Backup:
       - CloneZilla: howto/backup/clonezilla.md
