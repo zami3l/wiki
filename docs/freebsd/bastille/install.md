@@ -12,13 +12,6 @@ Données de bastille stockées dans : `/zroot/bastille`
 zfs create zroot/bastille
 ```
 
-Données des jails stockées dans `/zroot/data`
-```shell
-mkdir /data
-zfs create zroot/data -o mountpoint=/data
-zfs create -o mountpoint=/data zroot/data
-```
-
 Déclaration du volume ZFS dans `/usr/local/etc/bastille/bastille.conf`
 ```shell
 ## ZFS options
@@ -34,9 +27,9 @@ cloned_interfaces=lo1
 ifconfig_lo1_name="bastille0"
 ```
 
-Redémarrage du réseau
+Activation de l'interface loopback
 ```shell
-sh /etc/netstart
+service netif cloneup
 ```
 
 ### 4. Firewall
