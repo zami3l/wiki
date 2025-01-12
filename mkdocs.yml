@@ -28,6 +28,8 @@ nav:
       - Setup:
           - Setup interface on OpenBSD: networking/setup/setup-openbsd-interface.md
           - Setup VPN Mullvad on OpenBSD: networking/setup/setup-openbsd-wireguard-mullvad.md
+      - Tools:
+          - Use Netcat-OpenBSD: networking/tools/use-netcat-openbsd.md
   - Security:
       - Encryption:
           - Create GPG keys: security/encryption/create-gpg-keys.md
