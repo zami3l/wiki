@@ -20,11 +20,13 @@ nav:
       - Install on APU4D4: openbsd/system-management/apu4d4.md
       - Install file sets: openbsd/system-management/file-sets.md
       - Install from debian: openbsd/system-management/ramdisk-from-debian.md
-      - PKG: openbsd/system-management/pkg.md
+      - pkg: openbsd/system-management/pkg.md
     - Install:
       - Nginx: openbsd/install/nginx.md
       - rTorrent: openbsd/install/rtorrent.md
       - Unbound: openbsd/install/unbound.md
+    - Network:
+      - VRF: openbsd/network/vrf.md
     - Setup:
       - Network interface: openbsd/setup/network-interface.md
       - Unbound with rdomain: openbsd/setup/unbound-rdomain.md
@@ -39,8 +41,9 @@ nav:
       - Upgrade: freebsd/system-management/upgrade.md
       - ZFS Encryption: freebsd/system-management/zfs-encryption.md
       - ZFS Raid-1: freebsd/system-management/zfs-raid-1.md
-    - Networking:
-      - Setup UCARP: freebsd/networking/setup-ucarp.md
+      - Get src from git: freebsd/system-management/get-src.md
+    - Network:
+      - Setup UCARP: freebsd/network/setup-ucarp.md
     - Install:
       - Apache: freebsd/install/apache.md
       - Gitea: freebsd/install/gitea.md
@@ -64,12 +67,11 @@ nav:
     - Misc:
       - WeeChat: howto/misc/weechat.md
       - Custom WeeChat: howto/misc/custom-weechat.md
-    - Networking:
-      - Netmask Table: howto/networking/netmask-table.md
-      - Serial console: howto/networking/serial-console.md
-      - NetCat: howto/networking/netcat.md
-      - Tcpdump: howto/networking/tcpdump.md
-      - VRF: howto/networking/vrf.md
+    - Network:
+      - Netmask Table: howto/network/netmask-table.md
+      - Serial console: howto/network/serial-console.md
+      - NetCat: howto/network/netcat.md
+      - Tcpdump: howto/network/tcpdump.md
     - SSL:
       - Certbot: howto/ssl/certbot.md
       - Create CA / Cert: howto/ssl/create-ca-crt.md
@@ -79,6 +81,7 @@ nav:
       - John bruteforce shadow: howto/pentest/john-bruteforce-shadow.md
   - Troubleshooting:
     - Redis failed opening dump.rdb: troubleshooting/redis-failed-opening-dump.md
+    - Wireless AC9560 failed to load: troubleshooting/wireless-ac9560-failed-to-load.md
 
 # ----------------------------------------------
 # THEME
