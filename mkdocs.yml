@@ -12,6 +12,7 @@ nav:
     - System Management:
       - Install ArchLinux: linux/system-management/install-arch.md
       - Resize disk and part: linux/system-management/resize-disk-part.md
+      - Chroot: linux/system-management/chroot.md
     - Install:
       - Docker: linux/install/docker.md
       - KVM: linux/install/kvm.md
