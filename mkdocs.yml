@@ -8,6 +8,8 @@ site_url: https://wiki.netunix.net
 # NAVIGATION
 # ----------------------------------------------
 nav:
+  - Ansible:
+    - Merged variables: ansible/merged_variables.md
   - GNU/Linux:
     - System Management:
       - Install ArchLinux: linux/system-management/install-arch.md
