@@ -2,13 +2,15 @@ Fusionner des variables
 ===
 
 ### 0. Description
-Ansible par défaut surcharge les variables et ne permet pas la construction en mode merge.
-Si je déclare une variable dans `group_vars/all.yml` + `group_vars/mygroup.yml` + `host_vars/myhost.yml`, `group_vars/*` sera surchargé par `host_vars/myhost.yml`.
-Pour obtenir le comportement que je souhaite, je n'ai pas d'autres choix que de déclarer des variables différentes et de merger les variables.
-Pour standardiser, les variables seront préfixées par `_global`, `_group`, `_host` et `_merged`.
+Ansible par défaut surcharge les variables et ne permet pas la construction en mode merge.  
+Si je déclare une variable dans `group_vars/all.yml` + `group_vars/mygroup.yml` + `host_vars/myhost.yml`, `group_vars/*` sera surchargé par `host_vars/myhost.yml`.  
+Pour obtenir le comportement que je souhaite, je n'ai pas d'autres choix que de déclarer des variables différentes et de merger les variables.  
+Pour standardiser, les variables seront préfixées par `_global`, `_group`, `_host` et `_merged`.  
 
 Dans cet exemple, le but est de générer un fichier qui va load mes anchors dans OpenBSD.
+
 ### 1. Arborescence
+
 ```bash
 infra/
 ├── group_vars/
@@ -22,6 +24,7 @@ infra/
 ```
 
 ### 2. Configurations
+
 **group_vars/all.yml :**
 ```yaml
 anchors_global:
@@ -67,8 +70,8 @@ all:
         remote_src: yes
 ```
 
- **templates/load_anchors.j2 :**
- ```yaml
+**templates/load_anchors.j2 :**
+```yaml
  {% set anchors_merged = (anchors_global | default([])) + 
                         (anchors_group   | default([])) + 
                         (anchors_host   | default([])) %}
@@ -79,7 +82,8 @@ load anchor "{{ anchor }}" from "/etc/pf.conf.d/anchors/{{ anchor }}.conf"
 ```
 
 ### 3. Résultat
-```
+
+```bash
 load anchor "ssh" from "/etc/pf.conf.d/anchors/ssh.conf"
 load anchor "blacklist" from "/etc/pf.conf.d/anchors/blacklist.conf"
 load anchor "pfsync" from "/etc/pf.conf.d/anchors/pfsync.conf"
