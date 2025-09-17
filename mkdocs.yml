@@ -48,8 +48,9 @@ nav:
       - Get src from git: freebsd/system-management/get-src.md
       - Add own root CA: freebsd/system-management/add-own-rootca.md
     - ZFS:
-      - ZFS Encryption: freebsd/zfs/zfs-encryption.md
-      - ZFS Raid-1: freebsd/zfs/zfs-raid-1.md
+      - Create pool: freebsd/zfs/create-pool.md
+      - Encryption: freebsd/zfs/zfs-encryption.md
+      - Raid-1: freebsd/zfs/zfs-raid-1.md
       - Resize dataset: freebsd/zfs/resize-dataset.md
     - Network:
       - VRF: freebsd/network/vrf.md
